@@ -1,0 +1,87 @@
+/* Fonts */
+body {
+  margin: 0;
+  font-family: 'Rubik Mono One', sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.hero {
+  background: url('https://i.imgur.com/L3XWepz.jpeg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #FF00FF;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #00FFFF;
+}
+
+.cta-btn {
+  background-color: #FF00FF;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #FF33FF;
+}
+
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(45deg, #222, #333);
+}
+
+.notify {
+  padding: 60px 20px;
+  background-color: #222;
+}
+
+.notify input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.notify button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #00FFFF;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 20px;
+  background-color: #111;
+  border-top: 1px solid #333;
+}
+
+footer .socials a {
+  color: #FF00FF;
+  text-decoration: none;
+  margin: 0 10px;
+}
