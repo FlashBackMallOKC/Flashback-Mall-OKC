@@ -1,100 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Flashback Mall OKC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
     body {
       margin: 0;
       padding: 0;
-      background-color: black;
-      font-family: 'Arial', sans-serif;
-      color: white;
-      background-image: url('background: url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif') no-repeat center center/cover;
-');
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      background: url('assets/retro-bg.gif') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       height: 100vh;
     }
 
-    .overlay {
-      background: rgba(0, 0, 0, 0.75);
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding-top: 15%;
-    }
-
     h1 {
-      font-size: 48px;
-      color: #ff3399;
-      font-family: 'Arial Black', sans-serif;
+      font-size: 2.5em;
+      color: #ff00cc;
+      text-shadow: 2px 2px 4px #000;
+      margin-bottom: 0.5em;
     }
 
     p {
-      font-size: 20px;
-      color: #f0f0f0;
+      font-size: 1em;
+      color: #00ffff;
+      text-shadow: 1px 1px 2px #000;
+      max-width: 600px;
+      margin-bottom: 2em;
     }
 
-    #notify {
-      text-align: center;
-      margin-top: 40px;
+    .notify-form {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #ff00cc;
     }
 
-    #notify form {
-      margin-top: 20px;
-    }
-
-    #notify input[type="email"] {
+    input[type="email"] {
       padding: 10px;
-      border-radius: 5px;
-      border: none;
       width: 250px;
-      max-width: 90%;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Press Start 2P', cursive;
+      margin-bottom: 10px;
     }
 
-    #notify button {
+    button {
       padding: 10px 20px;
-      background-color: #ff3399;
+      background-color: #ff00cc;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      margin-left: 10px;
+      font-family: 'Press Start 2P', cursive;
     }
 
-    #notify button:hover {
-      background-color: #ff66b2;
+    button:hover {
+      background-color: #ff33dd;
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
+  <h1>🎉 Flashback Mall OKC</h1>
+  <p>A Totally Rad 90s Mall Experience is coming to Oklahoma City. Be the first to know when we launch!</p>
 
-  <div class="content">
-    <h1>Flashback Mall OKC</h1>
-    <p>Coming Soon — A Totally Radical 90s Mall Experience</p>
-  </div>
-
-  <section id="notify">
-    <h2 style="color: white; font-family: 'Arial Black', sans-serif;">🛍️ Be the First to Know!</h2>
-    <p style="color: #f0f0f0;">Drop your email and get exclusive updates when Flashback Mall OKC opens!</p>
-
-    <form action="https://formspree.io/f/xvgarejw" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required />
+  <div class="notify-form">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required /><br>
       <input type="hidden" name="_redirect" value="https://flashbackmallokc.github.io/Flashback-Mall-OKC/thankyou.html" />
       <button type="submit">Notify Me</button>
     </form>
-  </section>
+  </div>
 </body>
 </html>
