@@ -1,44 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flashback Plaza</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flashback Mall OKC</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      background-image: url('background: url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif') no-repeat center center/cover;
+');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding-top: 15%;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #ff3399;
+      font-family: 'Arial Black', sans-serif;
+    }
+
+    p {
+      font-size: 20px;
+      color: #f0f0f0;
+    }
+
+    #notify {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #notify form {
+      margin-top: 20px;
+    }
+
+    #notify input[type="email"] {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 250px;
+      max-width: 90%;
+    }
+
+    #notify button {
+      padding: 10px 20px;
+      background-color: #ff3399;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    #notify button:hover {
+      background-color: #ff66b2;
+    }
+  </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="overlay">
-      <h1>Flashback Plaza</h1>
-      <p>Oklahoma’s First 90s-Themed Mall Experience</p>
-      <a href="#notify" class="cta-btn">Enter the Experience</a>
-    </div>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <h1>Flashback Mall OKC</h1>
+    <p>Coming Soon — A Totally Radical 90s Mall Experience</p>
   </div>
 
-  <section class="about">
-    <h2>Welcome to the Past</h2>
-    <p>
-      A revival of everything radical — arcades, neon food courts, vintage shops, and your favorite throwback tunes. Flashback Plaza is more than a mall. It’s a time capsule.
-    </p>
-  </section>
+  <section id="notify">
+    <h2 style="color: white; font-family: 'Arial Black', sans-serif;">🛍️ Be the First to Know!</h2>
+    <p style="color: #f0f0f0;">Drop your email and get exclusive updates when Flashback Mall OKC opens!</p>
 
-  <section class="notify" id="notify">
-    <h3>Be First in Line</h3>
-    <p>Drop your email to get notified when we launch.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" required>
+    <form action="https://formspree.io/f/xvgarejw" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <input type="hidden" name="_redirect" value="https://flashbackmallokc.github.io/Flashback-Mall-OKC/thankyou.html" />
       <button type="submit">Notify Me</button>
     </form>
   </section>
-
-  <footer>
-    <p>© 2025 Flashback Plaza</p>
-    <div class="socials">
-      <a href="#">Instagram</a> | 
-      <a href="#">TikTok</a> | 
-      <a href="#">YouTube</a>
-    </div>
-  </footer>
 </body>
 </html>
