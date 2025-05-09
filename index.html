@@ -2,83 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flashback Mall OKC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Press Start 2P', cursive;
-      color: #fff;
-      background: url('background: url('https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif') no-repeat center center/cover;
-') no-repeat center center fixed;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      height: 100vh;
-    }
-
-    h1 {
-      font-size: 2.5em;
-      color: #ff00cc;
-      text-shadow: 2px 2px 4px #000;
-      margin-bottom: 0.5em;
-    }
-
-    p {
-      font-size: 1em;
-      color: #00ffff;
-      text-shadow: 1px 1px 2px #000;
-      max-width: 600px;
-      margin-bottom: 2em;
-    }
-
-    .notify-form {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 1.5em;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #ff00cc;
-    }
-
-    input[type="email"] {
-      padding: 10px;
-      width: 250px;
-      border: none;
-      border-radius: 5px;
-      font-family: 'Press Start 2P', cursive;
-      margin-bottom: 10px;
-    }
-
-    button {
-      padding: 10px 20px;
-      background-color: #ff00cc;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: 'Press Start 2P', cursive;
-    }
-
-    button:hover {
-      background-color: #ff33dd;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flashback Plaza</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>🎉 Flashback Mall OKC</h1>
-  <p>A Totally Rad 90s Mall Experience is coming to Oklahoma City. Be the first to know when we launch!</p>
+  <div class="hero">
+    <div class="overlay">
+      <h1>Flashback Plaza</h1>
+      <p>Oklahoma’s First 90s-Themed Mall Experience</p>
+      <a href="#notify" class="cta-btn">Enter the Experience</a>
+    </div>
+  </div>
 
-  <div class="notify-form">
-    <form action="https://formspree.io/f/xvgarejw" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required /><br>
-      <input type="hidden" name="_redirect" value="https://flashbackmallokc.github.io/Flashback-Mall-OKC/thankyou.html" />
+  <section class="about">
+    <h2>Welcome to the Past</h2>
+    <p>
+      A revival of everything radical — arcades, neon food courts, vintage shops, and your favorite throwback tunes. Flashback Plaza is more than a mall. It’s a time capsule.
+    </p>
+  </section>
+
+  <!-- Notify Section -->
+  <section class="notify" id="notify">
+    <h3>Be First in Line</h3>
+    <p>Drop your email to get notified when we launch.</p>
+    
+    <!-- Updated Form to use Formspree -->
+    <form action="https://formspree.io/f/xvgarejw" method="POST" id="emailForm">
+      <input type="email" name="email" placeholder="Enter your email" required>
       <button type="submit">Notify Me</button>
     </form>
-  </div>
+
+    <!-- Thank You Message (hidden by default) -->
+    <div id="thankYouMessage" style="display:none;">
+      <h3>Thank You!</h3>
+      <p>We'll notify you as soon as Flashback Plaza opens. Stay tuned!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Flashback Plaza</p>
+    <div class="socials">
+      <a href="#">Instagram</a> | 
+      <a href="#">TikTok</a> | 
+      <a href="#">YouTube</a>
+    </div>
+  </footer>
+
+  <script>
+    // Handle email form submission
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent page refresh
+      
+      // Show the thank you message
+      document.getElementById('thankYouMessage').style.display = 'block';
+      
+      // Hide the email form
+      document.getElementById('emailForm').style.display = 'none';
+      
+      // Additional logic for handling Formspree can be added here if needed
+    });
+  </script>
 </body>
 </html>
